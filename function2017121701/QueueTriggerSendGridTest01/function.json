@@ -1,0 +1,28 @@
+{
+  "bindings": [
+    {
+      "name": "myQueueItem",
+      "type": "queueTrigger",
+      "direction": "in",
+      "queueName": "apexamqueue-items",
+      "connection": "AzureWebJobsStorage"
+    },
+    {
+      "type": "sendGrid",
+      "name": "message",
+      "apiKey": "SendGridKey",
+      "to": "hopeaaaa@gmail.com",
+      "from": "SytemTest@apExamTest.jp",
+      "subject": "FunctionsSystemTest",
+      "direction": "out"
+    },
+    {
+      "type": "table",
+      "name": "emailAuthRecord",
+      "tableName": "emailAuthTable",
+      "connection": "AzureWebJobsStorage",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
